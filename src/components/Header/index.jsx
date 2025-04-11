@@ -3,6 +3,7 @@ import { Burger, Container, Group, Stack } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
 import classes from "./index.module.css";
 import logo from "../../assets/logo.png";
+import logoOpen from "../../assets/logo_open.png";
 import { NavLink } from "react-router";
 
 const links = [
@@ -30,7 +31,7 @@ export const Header = () => {
     <header className={classes.header}>
       <Container size="xl" className={classes.inner}>
         <img
-          src={logo}
+          src={opened ? logoOpen : logo}
           alt="Zoey Kourianos"
           className={classes.logo}
           aria-label="Zoey Kourianos"
