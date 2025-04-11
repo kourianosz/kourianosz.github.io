@@ -1,13 +1,37 @@
-import './App.css';
+import { Footer } from "./components/Footer";
+import { Header } from "./components/Header";
+import { AppShell, Container, MantineProvider } from "@mantine/core";
+import { Home } from "./pages/home";
+import { Contact } from "./pages/Contact";
+import { Route, Routes } from "react-router";
+import { About } from "./pages/About";
 
 function App() {
   return (
-    <>
-      <h2>Hi, I'm</h2>
-      <h1>💕Zoey Kourianos💕</h1>
-      <h3>I'm a UI/UX Designer</h3>
-      <h5>P.S. I know this isn't amazing right now. My boyfriend made it.</h5>
-    </>
+    <MantineProvider forceColorScheme="light">
+      <AppShell
+        withBorder={false}
+        header={{
+          height: 64,
+        }}
+      >
+        <AppShell.Header>
+          <Header />
+        </AppShell.Header>
+        <AppShell.Main>
+          <Container size={"xl"}>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/about" element={<About />} />=
+              <Route path="/contact" element={<Contact />} />
+            </Routes>
+          </Container>
+        </AppShell.Main>
+        <AppShell.Footer>
+          <Footer />
+        </AppShell.Footer>
+      </AppShell>
+    </MantineProvider>
   );
 }
 

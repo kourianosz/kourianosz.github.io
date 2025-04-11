@@ -1,0 +1,17 @@
+.inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: var(--mantine-spacing-md);
+
+  @media (max-width: $mantine-breakpoint-xs) {
+    flex-direction: column;
+    padding-bottom: var(--mantine-spacing-sm);
+  }
+}
+
+.links {
+  @media (max-width: $mantine-breakpoint-xs) {
+    margin-top: var(--mantine-spacing-xs);
+  }
+}
