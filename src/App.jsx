@@ -1,10 +1,7 @@
-import { Footer } from "./components/Footer";
-import { Header } from "./components/Header";
+import { Header, Footer } from "./components";
 import { AppShell, Container, MantineProvider } from "@mantine/core";
-import { Home } from "./pages/Home";
-import { Contact } from "./pages/Contact";
 import { Route, Routes } from "react-router";
-import { About } from "./pages/About";
+import { Home, Contact, About } from "./pages";
 
 function App() {
   return (

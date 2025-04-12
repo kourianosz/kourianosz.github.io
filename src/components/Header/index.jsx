@@ -1,27 +1,27 @@
-import { useState } from "react";
 import { Burger, Container, Group, Stack } from "@mantine/core";
-import { useDisclosure } from "@mantine/hooks";
+import { useDisclosure, useHover } from "@mantine/hooks";
 import classes from "./index.module.css";
 import logo from "../../assets/logo.png";
 import logoOpen from "../../assets/logo_open.png";
 import { NavLink } from "react-router";
+import { headerLinks } from "../../util/config";
 
-const links = [
-  { link: "/", label: "Work" },
-  { link: "/about", label: "About" },
-  { link: "/contact", label: "Contact" },
-];
-
-export const Header = () => {
+const Header = () => {
   const [opened, { toggle }] = useDisclosure(false);
+  const { hovered, ref } = useHover();
 
-  const items = links.map((link) => (
+  const items = headerLinks.map((link) => (
     <NavLink
       key={link.label}
       to={link.link}
       className={({ isActive }) =>
         `${classes.link} ${isActive ? classes.active : ""}`
       }
+      onClick={() => {
+        if (opened) {
+          toggle();
+        }
+      }}
     >
       {link.label}
     </NavLink>
@@ -30,12 +30,14 @@ export const Header = () => {
   return (
     <header className={classes.header}>
       <Container size="xl" className={classes.inner}>
-        <img
-          src={opened ? logoOpen : logo}
-          alt="Zoey Kourianos"
-          className={classes.logo}
-          aria-label="Zoey Kourianos"
-        />
+        <NavLink ref={ref} to="/" onClick={opened ? toggle : null}>
+          <img
+            src={opened || hovered ? logoOpen : logo}
+            alt="Zoey Kourianos"
+            className={classes.logo}
+            aria-label="Zoey Kourianos"
+          />
+        </NavLink>
         <Group gap={5} visibleFrom="xs">
           {items}
         </Group>
@@ -49,3 +51,5 @@ export const Header = () => {
     </header>
   );
 };
+
+export default Header;
