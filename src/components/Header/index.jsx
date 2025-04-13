@@ -1,10 +1,9 @@
-import { Burger, Container, Group, Stack } from "@mantine/core";
+import { Burger, Collapse, Container, Group, Stack, Text } from "@mantine/core";
 import { useDisclosure, useHover } from "@mantine/hooks";
 import classes from "./index.module.css";
-import logo from "../../assets/logo.png";
-import logoOpen from "../../assets/logo_open.png";
 import { NavLink } from "react-router";
 import { headerLinks } from "../../util/config";
+import { logo, logoOpen } from "../../assets";
 
 const Header = () => {
   const [opened, { toggle }] = useDisclosure(false);
@@ -23,7 +22,7 @@ const Header = () => {
         }
       }}
     >
-      {link.label}
+      <Text>{link.label}</Text>
     </NavLink>
   ));
 
@@ -43,11 +42,11 @@ const Header = () => {
         </Group>
         <Burger opened={opened} onClick={toggle} hiddenFrom="xs" size="sm" />
       </Container>
-      {opened && (
-        <Container hiddenFrom="xs">
+      <Collapse in={opened}>
+        <Container hiddenFrom="xs" pb={10}>
           <Stack gap={5}>{items}</Stack>
         </Container>
-      )}
+      </Collapse>
     </header>
   );
 };

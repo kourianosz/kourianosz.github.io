@@ -1,7 +1,7 @@
 import { Header, Footer } from "./components";
 import { AppShell, Container, MantineProvider } from "@mantine/core";
 import { Route, Routes } from "react-router";
-import { Home, Contact, About } from "./pages";
+import { Home, Contact, About, InvalidRoute } from "./pages";
 
 function App() {
   return (
@@ -21,6 +21,7 @@ function App() {
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<About />} />=
               <Route path="/contact" element={<Contact />} />
+              <Route path="*" element={<InvalidRoute />} />
             </Routes>
           </Container>
         </AppShell.Main>

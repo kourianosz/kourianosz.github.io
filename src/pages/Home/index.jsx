@@ -4,7 +4,7 @@ import classes from "./index.module.css";
 
 const Home = () => {
   return (
-    <div>
+    <>
       <Container className={classes.wrapper} size={"xl"}>
         <div>
           <Title className={classes.title}>
@@ -13,7 +13,7 @@ const Home = () => {
               Zoey Kourianos
             </Text>
           </Title>
-          <Container p={0} size={600}>
+          <Container p={0} size={600} pt={10}>
             <Text size="lg" c="dimmed" className={classes.description}>
               Product Designer crafting clean, intuitive designs based in the
               Bay Area.
@@ -22,7 +22,7 @@ const Home = () => {
         </div>
       </Container>
       <ProjectGrid />
-    </div>
+    </>
   );
 };
 

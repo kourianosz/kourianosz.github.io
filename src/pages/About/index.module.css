@@ -1,0 +1,7 @@
+.contactHeader {
+  font-size: 80px !important;
+
+  @media (max-width: $mantine-breakpoint-xs) {
+    font-size: 50px !important;
+  }
+}
