@@ -21,7 +21,7 @@ const InvalidRoute = () => {
           </Text>
           <Group justify="center">
             <NavLink to="/">
-              <Button size="md" color={"var(--mantine-color-pink-5)"}>
+              <Button size="md" color={"pink.5"}>
                 Take me back to home page
               </Button>
             </NavLink>

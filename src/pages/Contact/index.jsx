@@ -30,7 +30,7 @@ const Contact = () => {
         <Text
           component="h1"
           fw={600}
-          c={"var(--mantine-color-pink-5)"}
+          c={"pink.5"}
           className={classes.contactHeader}
         >
           Get In Touch
@@ -69,7 +69,7 @@ const Contact = () => {
           c={"dimmed"}
           fw={600}
           style={{
-            textDecorationColor: "var(--mantine-color-pink-5)",
+            textDecorationColor: "pink.5",
             textUnderlineOffset: 3,
           }}
         >
@@ -81,7 +81,7 @@ const Contact = () => {
           c={"dimmed"}
           fw={600}
           style={{
-            textDecorationColor: "var(--mantine-color-pink-5)",
+            textDecorationColor: "pink.5",
             textUnderlineOffset: 3,
           }}
         >

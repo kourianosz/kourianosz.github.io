@@ -1,6 +1,6 @@
 import { Container, Divider, Grid, Image, Stack, Text } from "@mantine/core";
 import classes from "./index.module.css";
-import { ContactForm } from "../../components";
+import { AboutDetails } from "../../components";
 import { zoeyImage } from "../../assets";
 
 const About = () => {
@@ -44,7 +44,7 @@ const About = () => {
             <Text
               component="h1"
               fw={600}
-              c={"var(--mantine-color-pink-5)"}
+              c={"pink.5"}
               className={classes.contactHeader}
             >
               Zoey Kourianos
@@ -78,7 +78,8 @@ const About = () => {
           </Stack>
         </Grid.Col>
       </Grid>
-      <Divider size={"lg"} mt={20} />
+      <Divider size={"md"} mt={20} mb={20} />
+      <AboutDetails />
     </Container>
   );
 };

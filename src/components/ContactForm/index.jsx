@@ -99,12 +99,7 @@ const ContactForm = () => {
       />
 
       <Group justify="right" mt="xl">
-        <Button
-          type="submit"
-          size="md"
-          color={"var(--mantine-color-pink-5)"}
-          disabled={submitting}
-        >
+        <Button type="submit" size="md" color={"pink.5"} disabled={submitting}>
           {submitText}
         </Button>
       </Group>
