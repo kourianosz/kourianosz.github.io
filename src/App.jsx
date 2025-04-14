@@ -2,8 +2,14 @@ import { Header, Footer } from "./components";
 import { AppShell, Container, MantineProvider } from "@mantine/core";
 import { Route, Routes } from "react-router";
 import { Home, Contact, About, InvalidRoute } from "./pages";
+import * as Assets from "./assets";
 
 function App() {
+  Object.values(Assets).forEach((assetSrc) => {
+    const img = new Image();
+    img.src = assetSrc;
+  });
+
   return (
     <MantineProvider forceColorScheme="light">
       <AppShell
