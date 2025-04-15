@@ -1,4 +1,6 @@
 import { SimpleGrid } from "@mantine/core";
+import ProjectItem from "../ProjectItem";
+import { acornImage } from "../../assets";
 
 const ProjectGrid = () => {
   return (
@@ -11,15 +13,9 @@ const ProjectGrid = () => {
       spacing={0}
       verticalSpacing={0}
     >
-      <div style={{ backgroundColor: "lightblue", height: "100px" }}>
-        Project 1
-      </div>
-      <div style={{ backgroundColor: "lightgreen", height: "100px" }}>
-        Project 2
-      </div>
-      <div style={{ backgroundColor: "lightcoral", height: "100px" }}>
-        Project 3
-      </div>
+      <ProjectItem title={"Acorn"} subtitle={"UI / UX"} imageUrl={acornImage} />
+      <ProjectItem title={"Acorn"} subtitle={"UI / UX"} imageUrl={acornImage} />
+      <ProjectItem title={"Acorn"} subtitle={"UI / UX"} imageUrl={acornImage} />
     </SimpleGrid>
   );
 };

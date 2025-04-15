@@ -1,0 +1,43 @@
+.card {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1;
+  background-color: light-dark(
+    var(--mantine-color-gray-0),
+    var(--mantine-color-dark-6)
+  );
+
+  @mixin hover {
+    & .overlay {
+      background-color: rgba(0, 0, 0, 0.65);
+    }
+    & .content {
+      visibility: visible;
+      transform: translateY(0);
+    }
+  }
+}
+
+.image {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  transition: transform 500ms ease;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0);
+  transition: background-color 150ms ease;
+}
+
+.content {
+  transform: translateY(10px);
+  z-index: 1;
+  visibility: hidden;
+  transition: transform 500ms ease;
+}
