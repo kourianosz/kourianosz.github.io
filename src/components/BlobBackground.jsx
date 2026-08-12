@@ -1,5 +1,5 @@
-import { useEffect, useRef } from 'react';
-import { Mesh, Program, Renderer, Triangle } from 'ogl';
+import { useEffect, useRef } from "react";
+import { Mesh, Program, Renderer, Triangle } from "ogl";
 
 const vertexShader = `
 attribute vec2 position;
@@ -21,7 +21,7 @@ varying vec2 vUv;
 
 float blob(vec2 point, vec2 center, float radius, vec2 shape) {
   vec2 delta = (point - center) * shape;
-  return exp(-dot(delta, delta) / (radius * radius));
+  return exp(-dot(delta, delta) / (radius * radius * 0.5));
 }
 
 vec3 layer(vec3 base, vec3 tint, float amount, float strength) {
@@ -110,7 +110,7 @@ export function BlobBackground() {
       antialias: false,
       alpha: false,
       dpr: Math.min(window.devicePixelRatio || 1, 1.5),
-      powerPreference: 'low-power',
+      powerPreference: "low-power",
     });
     const gl = renderer.gl;
     const geometry = new Triangle(gl);
@@ -130,17 +130,11 @@ export function BlobBackground() {
 
     const resize = () => {
       const background = canvas.parentElement;
-      const page = background?.closest('.home-page');
-      const width = Math.max(1, Math.round(page?.clientWidth || window.innerWidth));
+      const page = background?.closest(".home-page");
+      const width = Math.max(1, Math.round(window.innerWidth));
       const height = Math.max(
         1,
-        Math.round(
-          Math.max(
-            page?.scrollHeight || 0,
-            page?.getBoundingClientRect().height || 0,
-            window.innerHeight,
-          ),
-        ),
+        Math.round(page?.getBoundingClientRect().height || window.innerHeight),
       );
 
       if (background) {
@@ -166,19 +160,19 @@ export function BlobBackground() {
 
     resize();
     const resizeObserver = new ResizeObserver(resize);
-    const page = canvas.parentElement?.closest('.home-page');
+    const page = canvas.parentElement?.closest(".home-page");
     if (page) {
       resizeObserver.observe(page);
     }
 
-    window.addEventListener('resize', resize);
+    window.addEventListener("resize", resize);
     document.fonts?.ready.then(resize).catch(() => {});
     animationFrame = requestAnimationFrame(render);
 
     return () => {
       cancelAnimationFrame(animationFrame);
       resizeObserver.disconnect();
-      window.removeEventListener('resize', resize);
+      window.removeEventListener("resize", resize);
     };
   }, []);
 
