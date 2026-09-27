@@ -1,0 +1,19 @@
+.about-page {
+  max-width: 640px;
+  margin-inline: auto;
+  padding: 160px 24px 80px;
+}
+.about-page__details {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  margin-top: 64px;
+}
+@media (min-width: 640px) {
+  .about-page {
+    padding: 224px 40px 112px;
+  }
+  .about-page__details {
+    margin-top: 96px;
+  }
+}

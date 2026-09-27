@@ -1,0 +1,113 @@
+.skills {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.skills__groups {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  padding: 16px;
+  border: 1px solid var(--border);
+  background: var(--surface-soft);
+  border-radius: 28px;
+}
+.skills__group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.skills__group + .skills__group {
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1.5px solid var(--border);
+}
+.skills__more {
+  display: grid;
+  grid-template-rows: 0fr;
+  overflow: hidden;
+  opacity: 0;
+  transition:
+    grid-template-rows 280ms ease,
+    opacity 180ms ease;
+}
+.skills__more[data-open="true"] {
+  grid-template-rows: 1fr;
+  opacity: 1;
+}
+.skills__more-inner {
+  min-height: 0;
+  overflow: hidden;
+}
+.skills__more-inner .skills__group:first-child {
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1.5px solid var(--border);
+}
+.skills__more[data-open="true"] + .skills__toggle {
+  padding-top: 16px;
+}
+.skills__group h3 {
+  color: var(--heading-accent);
+  font-size: 14px;
+  font-weight: 650;
+  letter-spacing: 0;
+}
+.skills ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.skills li {
+  padding: 7px 12px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--surface);
+  font-size: 14px;
+  letter-spacing: 0;
+  line-height: 1.5;
+}
+.skills__toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  width: 100%;
+  padding: 6px 8px 0;
+  border: 0;
+  background: transparent;
+  color: var(--foreground);
+  font-size: 15px;
+  font-weight: 500;
+}
+.skills__toggle span {
+  display: inline-flex;
+}
+@media (min-width: 640px) {
+  .skills__groups {
+    padding: 18px;
+  }
+  .skills__group {
+    display: grid;
+    grid-template-columns: 140px 1fr;
+    align-items: start;
+    gap: 14px;
+  }
+  .skills__group h3 {
+    padding-top: 7px;
+    white-space: nowrap;
+  }
+  .skills__more[data-open="false"] {
+    display: block;
+    opacity: 1;
+  }
+  .skills__more-inner {
+    overflow: visible;
+  }
+  .skills__toggle {
+    display: none;
+  }
+  .skills li {
+    font-size: 15px;
+  }
+}

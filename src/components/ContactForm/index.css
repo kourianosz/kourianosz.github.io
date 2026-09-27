@@ -1,0 +1,121 @@
+.contact-form {
+  min-width: 0;
+}
+.contact-form fieldset {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  min-width: 0;
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+.contact-form__field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.contact-form label {
+  color: var(--foreground);
+  font-size: 14px;
+  font-weight: 500;
+}
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  min-width: 0;
+  border: 1px solid var(--border-strong);
+  border-radius: 12px;
+  padding: 13px 16px;
+  font: inherit;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--foreground);
+  background: var(--surface);
+  transition:
+    border-color 180ms,
+    box-shadow 180ms;
+}
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: var(--muted);
+  opacity: 1;
+}
+.contact-form textarea {
+  display: block;
+  min-height: 148px;
+  resize: vertical;
+}
+.contact-form input:hover,
+.contact-form textarea:hover {
+  border-color: var(--accent);
+}
+.contact-form input:focus-visible,
+.contact-form textarea:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+.contact-form input:disabled,
+.contact-form textarea:disabled {
+  opacity: 0.7;
+}
+.contact-form__submit {
+  align-self: flex-end;
+  justify-content: center;
+  width: auto;
+  min-height: 44px;
+  padding-inline: 18px;
+  color: var(--on-accent);
+  background: var(--accent);
+  border-color: var(--accent);
+}
+.contact-form__submit:hover {
+  background: var(--accent-hover);
+  border-color: var(--accent-hover);
+}
+.contact-form__submit:disabled {
+  cursor: wait;
+  opacity: 0.75;
+}
+.contact-form__feedback {
+  min-height: 24px;
+  margin-top: 12px;
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--text-secondary);
+  border-radius: 6px;
+}
+.contact-form__feedback p {
+  margin: 0;
+}
+.contact-form__feedback a {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.contact-form__success {
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+}
+.contact-form__success svg {
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+.contact-form__spinner {
+  animation: contact-form-spin 1s linear infinite;
+}
+@media (max-width: 767.98px) {
+  .contact-form__submit {
+    align-self: stretch;
+    width: 100%;
+  }
+  .contact-form__feedback:empty {
+    min-height: 0;
+    margin-top: 0;
+  }
+}
+@keyframes contact-form-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

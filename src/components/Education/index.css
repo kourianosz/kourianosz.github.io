@@ -1,0 +1,19 @@
+.education {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.education ul {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 8px;
+  border: 1px solid var(--border);
+  background: var(--surface-soft);
+  border-radius: 32px;
+}
+@media (min-width: 640px) {
+  .education ul {
+    padding: 16px;
+  }
+}

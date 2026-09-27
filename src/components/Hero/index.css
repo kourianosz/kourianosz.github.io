@@ -1,0 +1,61 @@
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  align-items: center;
+  gap: 32px;
+  padding-top: 176px;
+  padding-bottom: 96px;
+}
+.hero__copy {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.hero__greeting {
+  font-size: 20px;
+  line-height: 1.2;
+  font-weight: 500;
+  letter-spacing: -0.025em;
+}
+.hero h1 {
+  color: var(--heading-accent);
+  font-family: "Fredoka Variable", system-ui, sans-serif;
+  font-size: clamp(2.45rem, 10vw, 3.5rem);
+  font-weight: 550;
+  line-height: 1.05;
+  letter-spacing: -0.045em;
+  white-space: nowrap;
+}
+.hero__description {
+  max-width: 34ch;
+  font-size: 22px;
+  line-height: 1.4;
+  letter-spacing: -0.025em;
+  color: var(--text-secondary);
+}
+.hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+  margin-top: 8px;
+}
+@media (min-width: 640px) {
+  .hero {
+    padding-top: 224px;
+    padding-bottom: 128px;
+  }
+}
+@media (min-width: 768px) {
+  .hero {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .hero h1 {
+    font-size: 3.5rem;
+  }
+}
+@media (min-width: 1024px) {
+  .hero h1 {
+    font-size: 4.5rem;
+  }
+}

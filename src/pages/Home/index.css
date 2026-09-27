@@ -1,0 +1,10 @@
+.home-page {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+@media (min-width: 640px) {
+  .home-page {
+    gap: 112px;
+  }
+}

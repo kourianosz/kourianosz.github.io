@@ -1,0 +1,23 @@
+.blob-background {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+  pointer-events: none;
+  background:
+    radial-gradient(ellipse at 93% 60%, rgb(75% 57% 100% / 32%), transparent 80%),
+    radial-gradient(ellipse at 22% 38%, rgb(100% 87% 49% / 28%), transparent 80%),
+    radial-gradient(ellipse at 76% 82%, rgb(100% 68% 53% / 34%), transparent 90%),
+    radial-gradient(ellipse at 86% 30%, rgb(100% 25% 61% / 44%), transparent 90%),
+    radial-gradient(ellipse at 34% 76%, rgb(85% 12% 43% / 48%), transparent 90%),
+    radial-gradient(ellipse at 70% 66%, rgb(94% 17% 49% / 58%), transparent 100%),
+    radial-gradient(ellipse at 58% 42%, rgb(100% 49% 71% / 58%), transparent 100%),
+    radial-gradient(ellipse at 48% 20%, rgb(100% 76% 86% / 54%), transparent 100%),
+    rgb(100% 96.5% 98.5%);
+}
+
+.blob-background__canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
