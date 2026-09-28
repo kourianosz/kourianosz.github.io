@@ -1,6 +1,6 @@
 import { ArrowLeft } from "lucide-react";
 import { Link, useParams } from "react-router-dom";
-import { getProjectTitle, projects } from "../../data/projects";
+import { projects } from "../../data/projects";
 import NotFound from "../NotFound";
 import "./index.css";
 
@@ -12,19 +12,12 @@ export default function ProjectDetail() {
     return <NotFound />;
   }
 
-  const title = getProjectTitle(project);
-
   return (
     <article className="project-detail container">
       <Link className="project-detail__back" to="/projects">
         <ArrowLeft aria-hidden="true" />
         Back to projects
       </Link>
-      <header className="project-detail__heading">
-        <p>{project.meta}</p>
-        <h1 className="section-heading">{title}</h1>
-        <span>Project</span>
-      </header>
       <div
         className="project-detail__image"
         style={{ aspectRatio: project.imageRatio }}

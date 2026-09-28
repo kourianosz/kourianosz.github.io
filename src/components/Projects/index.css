@@ -18,8 +18,9 @@
   color: var(--text-secondary);
 }
 .projects__grid {
-  columns: 1;
-  column-gap: 24px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 24px;
 }
 .projects__more {
   display: flex;
@@ -40,8 +41,8 @@
 }
 @media (min-width: 768px) {
   .projects__grid {
-    columns: 2;
-    column-gap: 28px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 28px;
   }
   .projects__heading h2 {
     font-size: 3rem;

@@ -1,7 +1,7 @@
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, ExternalLink } from "lucide-react";
 import { motion } from "motion/react";
 import { Link } from "react-router-dom";
-import { getProjectTitle, type Project } from "../../data/projects";
+import { type Project } from "../../data/projects";
 import "./index.css";
 export default function ProjectCard({
   project,
@@ -10,7 +10,6 @@ export default function ProjectCard({
   project: Project;
   index: number;
 }) {
-  const title = getProjectTitle(project);
   const cardContent = (
     <>
       <div
@@ -24,17 +23,31 @@ export default function ProjectCard({
         />
       </div>
       <div className="project-card__copy">
-        <h3>{project.title}</h3>
         <p>{project.description}</p>
       </div>
       <div className="project-card__footer">
         <p className="project-card__meta">{project.meta}</p>
-        {project.ctaText && (
-          <span className="project-card__cta button button--secondary">
-            {project.ctaText}
-            <ArrowRight aria-hidden="true" />
-          </span>
-        )}
+        <div className="project-card__actions">
+          {project.ctaText && (
+            <span className="project-card__cta button button--secondary">
+              {project.ctaText}
+              <ArrowRight aria-hidden="true" />
+            </span>
+          )}
+          {project.prototypeUrl && (
+            <a
+              className="project-card__prototype-link button"
+              href={project.prototypeUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="View Acorn prototype"
+              onClick={(event) => event.stopPropagation()}
+            >
+              View prototype
+              <ExternalLink aria-hidden="true" />
+            </a>
+          )}
+        </div>
       </div>
     </>
   );
@@ -47,25 +60,24 @@ export default function ProjectCard({
       viewport={{ once: true, margin: "80px" }}
       transition={{ duration: 0.7, delay: Math.min(index * 0.06, 0.3) }}
     >
-      {project.projectLink ? (
-        <a
-          className="project-card__link"
-          href={project.projectLink}
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label={`View ${title}`}
-        >
-          {cardContent}
-        </a>
-      ) : (
-        <Link
-          className="project-card__link"
-          to={`/projects/${project.id}`}
-          aria-label={`View ${title}`}
-        >
-          {cardContent}
-        </Link>
-      )}
+      <div className="project-card__link">
+        {project.projectLink ? (
+          <a
+            className="project-card__hit-area"
+            href={project.projectLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="View project"
+          />
+        ) : (
+          <Link
+            className="project-card__hit-area"
+            to={`/projects/${project.id}`}
+            aria-label="View project"
+          />
+        )}
+        <div className="project-card__content">{cardContent}</div>
+      </div>
     </motion.article>
   );
 }
