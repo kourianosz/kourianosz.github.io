@@ -10,6 +10,12 @@ export default function ProjectCard({
   project: Project;
   index: number;
 }) {
+  const ctaLabel = project.ctaText && (
+    <>
+      {project.ctaText}
+      <ArrowRight aria-hidden="true" />
+    </>
+  );
   const cardContent = (
     <>
       <div
@@ -28,11 +34,25 @@ export default function ProjectCard({
       <div className="project-card__footer">
         <p className="project-card__meta">{project.meta}</p>
         <div className="project-card__actions">
-          {project.ctaText && (
-            <span className="project-card__cta button button--secondary">
-              {project.ctaText}
-              <ArrowRight aria-hidden="true" />
-            </span>
+          {project.ctaText && project.projectLink && (
+            <a
+              className="project-card__cta button button--secondary"
+              href={project.projectLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={project.ctaText}
+            >
+              {ctaLabel}
+            </a>
+          )}
+          {project.ctaText && !project.projectLink && (
+            <Link
+              className="project-card__cta button button--secondary"
+              to={`/projects/${project.id}`}
+              aria-label={project.ctaText}
+            >
+              {ctaLabel}
+            </Link>
           )}
           {project.prototypeUrl && (
             <a

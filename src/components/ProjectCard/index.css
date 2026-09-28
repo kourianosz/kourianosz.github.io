@@ -118,6 +118,7 @@
   min-height: 38px;
   padding: 8px 10px;
   font-size: 13px;
+  pointer-events: auto;
   white-space: nowrap;
 }
 .project-card__prototype-link {

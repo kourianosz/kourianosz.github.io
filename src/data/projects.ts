@@ -49,14 +49,14 @@ export const projects: Project[] = [
     projectLink:
       "https://www.behance.net/gallery/255973573/Acorn-Web-Browser-Trip-Planning-Companion",
   },
-  {
-    id: "sbb",
-    description:
-      "A weekly digest that turns raw product data into a simple narrative. Built so you can read it on a Sunday with coffee.",
-    meta: "Creator, 2026",
-    ctaText: "Read More",
-    imageRatio: 1024 / 768,
-    image: "/sweet_bunny_bakery_thumbnail_notext.jpg",
-    imageAlt: "Sweet Bunny Bakery mockup",
-  },
+  // {
+  //   id: "sbb",
+  //   description:
+  //     "A weekly digest that turns raw product data into a simple narrative. Built so you can read it on a Sunday with coffee.",
+  //   meta: "Creator, 2026",
+  //   ctaText: "Read More",
+  //   imageRatio: 1024 / 768,
+  //   image: "/sweet_bunny_bakery_thumbnail_notext.jpg",
+  //   imageAlt: "Sweet Bunny Bakery mockup",
+  // },
 ];
