@@ -5,6 +5,7 @@
   overflow: hidden;
   pointer-events: none;
   background:
+    radial-gradient(ellipse at 12% 52%, rgb(100% 48% 24% / 34%), transparent 86%),
     radial-gradient(ellipse at 93% 60%, rgb(75% 57% 100% / 32%), transparent 80%),
     radial-gradient(ellipse at 22% 38%, rgb(100% 87% 49% / 28%), transparent 80%),
     radial-gradient(ellipse at 76% 82%, rgb(100% 68% 53% / 34%), transparent 90%),

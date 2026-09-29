@@ -68,6 +68,10 @@ void main() {
     (0.93 + 0.05 * sin(t * 0.88)) * aspect,
     0.40 + 0.08 * cos(t * 1.11)
   );
+  vec2 orangeCenter = vec2(
+    (0.14 + 0.06 * sin(t * 0.78)) * aspect,
+    0.48 + 0.07 * cos(t * 1.08)
+  );
 
   float roseOne = blob(point, roseOneCenter, 0.36, vec2(0.92, 1.12));
   float roseTwo = blob(point, roseTwoCenter, 0.32, vec2(1.18, 0.88));
@@ -77,6 +81,7 @@ void main() {
   float peach = blob(point, peachCenter, 0.34, vec2(1.12, 0.86));
   float butter = blob(point, butterCenter, 0.30, vec2(0.9, 1.1));
   float lilac = blob(point, lilacCenter, 0.32, vec2(0.78, 1.24));
+  float orange = blob(point, orangeCenter, 0.34, vec2(1.08, 0.92));
 
   vec3 color = vec3(1.0, 0.965, 0.985);
   color = layer(color, vec3(1.0, 0.76, 0.86), blush, 0.54);
@@ -87,6 +92,7 @@ void main() {
   color = layer(color, vec3(1.0, 0.68, 0.53), peach, 0.34);
   color = layer(color, vec3(1.0, 0.87, 0.49), butter, 0.28);
   color = layer(color, vec3(0.75, 0.57, 1.0), lilac, 0.32);
+  color = layer(color, vec3(1.0, 0.42, 0.16), orange, 0.38);
 
   float grain = random(gl_FragCoord.xy) - 0.5;
   color += grain * 0.01;

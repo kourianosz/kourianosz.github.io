@@ -5,8 +5,14 @@
 #main-content {
   min-height: 100svh;
   outline: none;
-  padding-bottom: 64px;
 }
+
+@media (min-width: 640px) {
+  #main-content {
+    padding-bottom: 64px;
+  }
+}
+
 .skip-link {
   position: fixed;
   top: 16px;

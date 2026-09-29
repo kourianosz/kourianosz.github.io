@@ -1,5 +1,4 @@
 import { motion, useReducedMotion } from "motion/react";
-import PortraitMorph from "../PortraitMorph";
 import "./index.css";
 
 export default function Portrait() {
@@ -14,21 +13,7 @@ export default function Portrait() {
       transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
     >
       <div className="portrait__image">
-        {reducedMotion ? (
-          <img
-            src="/josh.webp"
-            alt="Josh portrait"
-            width={840}
-            height={840}
-            fetchPriority="high"
-          />
-        ) : (
-          <PortraitMorph
-            srcA="/josh.webp"
-            srcB="/josh_wave.webp"
-            alt="Josh portrait"
-          />
-        )}
+        <img src="/zoey.jpg" alt="Zoey portrait" fetchPriority="high" />
       </div>
     </motion.div>
   );
