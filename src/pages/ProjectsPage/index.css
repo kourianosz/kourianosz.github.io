@@ -1,5 +1,9 @@
+.projects-page .projects {
+  margin-bottom: 100px;
+}
+
 .projects-page__heading {
-  padding-top: 128px;
+  padding-top: 100px;
   padding-bottom: 64px;
   display: flex;
   flex-direction: column;
@@ -24,6 +28,11 @@
   }
   .projects-page__heading p {
     font-size: 22px;
+  }
+}
+@media (min-width: 768px) {
+  .projects-page .projects {
+    margin-bottom: 200px;
   }
 }
 @media (min-width: 768px) {

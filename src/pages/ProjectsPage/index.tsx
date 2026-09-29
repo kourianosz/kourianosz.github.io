@@ -3,7 +3,7 @@ import ContactSection from "../../components/ContactSection";
 import "./index.css";
 export default function ProjectsPage() {
   return (
-    <>
+    <div className="projects-page">
       <header className="projects-page__heading container">
         <h1 className="section-heading">My Projects</h1>
         <p>
@@ -13,6 +13,6 @@ export default function ProjectsPage() {
       </header>
       <Projects />
       <ContactSection />
-    </>
+    </div>
   );
 }

@@ -28,7 +28,7 @@
   border-radius: 12px;
   padding: 13px 16px;
   font: inherit;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 1.5;
   color: var(--foreground);
   background: var(--surface);
@@ -112,6 +112,12 @@
   .contact-form__feedback:empty {
     min-height: 0;
     margin-top: 0;
+  }
+}
+@media (min-width: 768px) {
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 16px;
   }
 }
 @keyframes contact-form-spin {
