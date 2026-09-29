@@ -25,7 +25,7 @@ export default function Projects() {
       {featured && (
         <div className="projects__more">
           <Link to="/projects" className="button button--secondary">
-            View All Projects
+            View all projects
             <ArrowRight aria-hidden="true" />
           </Link>
         </div>

@@ -21,7 +21,7 @@ export default function Hero() {
         <div className="hero__actions">
           <ContactButton />
           <Link className="button button--secondary" to="/projects">
-            View My Work
+            View my work
             <ArrowRight aria-hidden="true" />
           </Link>
         </div>

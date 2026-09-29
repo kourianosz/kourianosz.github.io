@@ -16,7 +16,7 @@ export const projects: Project[] = [
     description:
       "Acorn is a mobile outdoor gear e-commerce concept that integrates trip-based checklists into the shopping experience. Helping users plan upcoming trips, track what they already own, and find relevant products directly from checklist items.",
     meta: "Designer, 2026",
-    ctaText: "View Case Study",
+    ctaText: "View case study",
     imageRatio: 1024 / 768,
     image: "/acorn_app.jpg",
     imageAlt: "Acorn App mockup",
@@ -28,9 +28,9 @@ export const projects: Project[] = [
   {
     id: "moody",
     description:
-      "Moody is a playful, collaborative, web-based platform where users create and share mood boards.",
+      "Moody is a playful, collaborative, web-based platform where users create and share mood boards. Tactile visuals, intuitive creative tools, and real-time activity cues make the experience feel expressive and social.",
     meta: "Designer, 2026",
-    ctaText: "View Case Study",
+    ctaText: "View case study",
     imageRatio: 1024 / 768,
     image: "/moody.jpg",
     imageAlt: "Moody mockup",
@@ -42,7 +42,7 @@ export const projects: Project[] = [
     description:
       "Acorn Web focuses on designing mobile, tablet, and desktop websites that feel cohesive, accessible, and intuitive. It serves as the web adaptation of the Acorn app, translating its core functionality and visual identity into a browsing experience.",
     meta: "Designer, 2026",
-    ctaText: "View Case Study",
+    ctaText: "View case study",
     imageRatio: 1024 / 768,
     image: "/acorn_web.jpg",
     imageAlt: "Acorn Web mockup",

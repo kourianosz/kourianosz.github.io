@@ -99,7 +99,7 @@ export default function ContactForm() {
             />
           </div>
           <div className="contact-form__field">
-            <label htmlFor={`${id}-email`}>Email Address</label>
+            <label htmlFor={`${id}-email`}>Email address</label>
             <input
               id={`${id}-email`}
               name="email"
@@ -128,8 +128,8 @@ export default function ContactForm() {
               {sending
                 ? "Sending…"
                 : submission.status === "error"
-                  ? "Try Again"
-                  : "Send Message"}
+                  ? "Try again"
+                  : "Send message"}
             </span>
             {sending ? (
               <LoaderCircle
