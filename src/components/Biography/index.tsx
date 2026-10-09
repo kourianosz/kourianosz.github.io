@@ -8,26 +8,20 @@ export default function Biography() {
       </h1>
       <div className="biography__copy">
         <p>
-          A <strong>product designer and frontend engineer</strong> passionate
-          about building intuitive, human-centered digital experiences. With a
-          background in <strong>visual craft</strong> and{" "}
-          <strong>interaction design</strong>, I bring a unique blend of design
-          thinking and technical execution to every project.
+          A product designer based in the Bay Area. My designs are all about
+          making users feel organized, confident, and inspired. I think that
+          designs should meet users where they are at and support them in their
+          journey instead of assuming everyone needs the same experience. I
+          bring curiosity, attention to detail, and a collaborative mindset to
+          the way I approach design challenges.
         </p>
         <p>
-          My journey into design began when I realized how often good user
-          experience was missing from powerful tools. That led me to embrace{" "}
-          <strong>user-centered design</strong> as both a mindset and a craft,
-          one that balances clarity, creativity, and functionality.
-        </p>
-        <p>
-          Currently leading design at small product teams shipping software for{" "}
-          <strong>creative professionals</strong>, I’m always looking for
-          opportunities to{" "}
-          <strong>
-            shape thoughtful interfaces and build scalable design systems
-          </strong>
-          .
+          Outside of design, you'll often find me going down research rabbit
+          holes about restaurants and places I want to visit. Another creative
+          outlet of mine is an ongoing illustration project that imagines
+          desserts from around the world as bunnies. I love hearing about
+          people's niche interests, so tell me what rabbit holes you’ve
+          explored!
         </p>
       </div>
     </section>
