@@ -13,7 +13,7 @@ export default function ContactSection() {
             <h2 className="section-heading" id={headingId}>
               Reach Out!
             </h2>
-            <p>I'm always open to a chat, coffee or a pastry!</p>
+            <p>I'm always open to a chat, coffee, or a pastry!</p>
           </div>
           <div className="contact-section__form">
             <ContactForm />
