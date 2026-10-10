@@ -4,4 +4,5 @@ export const profile = {
   email: "kourianosz@gmail.com",
   linkedin: "https://www.linkedin.com/in/zoey-k/",
   behance: "https://www.behance.net/zoeykourianos",
+  resume: "/ZoeyKourianosResume.pdf",
 };

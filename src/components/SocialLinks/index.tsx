@@ -1,4 +1,4 @@
-import { Mail } from "lucide-react";
+import { FileText, Mail } from "lucide-react";
 import { profile } from "../../data/profile";
 import "./index.css";
 export default function SocialLinks() {
@@ -22,6 +22,14 @@ export default function SocialLinks() {
         rel="noopener noreferrer"
       >
         <img src="/behance.svg" alt="" width={18} height={18} />
+      </a>
+      <a
+        href={profile.resume}
+        aria-label="Resume"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <FileText size={17} strokeWidth={2.5} aria-hidden="true" />
       </a>
     </div>
   );
